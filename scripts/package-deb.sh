@@ -80,7 +80,7 @@ Maintainer: fanhui <652436962@qq.com>
 Section: utils
 Priority: optional
 Depends: libc6 (>= 2.35)
-Conflicts: rk-dev-suit
+Conflicts: rk-dev-suit, rk-dev-suite
 Installed-Size: $size
 Homepage: https://github.com/652436962/rkdevcli
 Description: Rockchip Maskrom/Loader flashing CLI
