@@ -1,5 +1,5 @@
 //! Rockchip flashing engine shared by the `rkdevcli` command line tool and the
-//! `rkdevsuit` desktop application.
+//! `RKDevSuite` desktop application.
 //!
 //! The crate has no GUI dependency by default. The optional `desktop` feature
 //! only adds host adapters (file pickers, MCP approval dialogs and window

@@ -12,7 +12,7 @@ categories = ["command-line-utilities", "hardware-support"]
 
 [features]
 default = ["headless-cli"]
-# Optional host adapters used by rkdevsuit (Tauri GUI). The engine itself is
+# Optional host adapters used by RKDevSuite (Tauri GUI). The engine itself is
 # independent of any GUI toolkit.
 desktop = ["dep:tauri", "dep:tauri-plugin-dialog", "dep:objc2-app-kit", "dep:windows-sys"]
 headless-cli = ["maintenance-cli", "tokio/signal"]

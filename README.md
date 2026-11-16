@@ -5,7 +5,7 @@
 
 面向 Rockchip Maskrom / Loader 设备的原生烧录命令行工具，使用 Rust + [rockusb](https://crates.io/crates/rockusb) + [nusb](https://crates.io/crates/nusb) 直接访问 USB，运行时不依赖 `rkdeveloptool`、Python 或 Qt。
 
-本仓库同时提供可复用的引擎库 `rkdev`：桌面版 [rkdevsuit](https://github.com/652436962/rkdevsuit) 以 git 依赖方式复用它，USB 枚举、固件解析、分区、烧录与任务状态逻辑只有一份实现。
+本仓库同时提供可复用的引擎库 `rkdev`：桌面版 [RKDevSuite](https://github.com/652436962/rkdevsuite) 以 git 依赖方式复用它，USB 枚举、固件解析、分区、烧录与任务状态逻辑只有一份实现。
 
 ## 下载
 
@@ -92,7 +92,7 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="2207", MODE="0666", TAG+="uaccess"
 
 ## 与上游的关系
 
-本仓库派生自 [FantasyGmm/rkdevtool-next](https://github.com/FantasyGmm/rkdevtool-next)（GPL-3.0-only），把原本与 Tauri 桌面端耦合的引擎拆为可独立构建的库与 CLI。上游的作者与贡献者信息见 [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md)。桌面界面见 [rkdevsuit](https://github.com/652436962/rkdevsuit)。
+本仓库派生自 [FantasyGmm/rkdevtool-next](https://github.com/FantasyGmm/rkdevtool-next)（GPL-3.0-only），把原本与 Tauri 桌面端耦合的引擎拆为可独立构建的库与 CLI。上游的作者与贡献者信息见 [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md)。桌面界面见 [RKDevSuite](https://github.com/652436962/rkdevsuite)。
 
 ## 许可
 
