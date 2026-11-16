@@ -21,7 +21,7 @@
 每个 Release 附带 `SHA256SUMS`。Debian / Ubuntu 也可以直接安装 deb（含命令与 udev 规则）：
 
 ```bash
-sudo apt install ./rkdevcli_0.1.0_amd64.deb
+sudo apt install ./rkdevcli_0.1.1_amd64.deb
 rkdevcli scan
 ```
 

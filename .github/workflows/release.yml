@@ -88,3 +88,11 @@ jobs:
           else
             gh release create "$GITHUB_REF_NAME" dist/* --title "rkdevcli $GITHUB_REF_NAME" --generate-notes
           fi
+      - name: Verify assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release view "$GITHUB_REF_NAME" --json assets --jq '.assets[].name'
+          count="$(gh release view "$GITHUB_REF_NAME" --json assets --jq '.assets | length')"
+          test "$count" -eq 5
