@@ -5,3 +5,6 @@
 *.bin
 *.dmg
 *.exe
+/staging/
+rkdevcli-*.tar.gz
+rkdevcli-*.zip

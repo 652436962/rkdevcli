@@ -7,6 +7,18 @@
 
 本仓库同时提供可复用的引擎库 `rkdev`：桌面版 [rkdevsuit](https://github.com/652436962/rkdevsuit) 以 git 依赖方式复用它，USB 枚举、固件解析、分区、烧录与任务状态逻辑只有一份实现。
 
+## 下载
+
+到 [Releases](https://github.com/652436962/rkdevcli/releases) 下载对应平台的压缩包，解压即可运行，无需安装：
+
+| 平台 | 文件 |
+| --- | --- |
+| Linux x86_64（glibc 2.35+） | `rkdevcli-<版本>-linux-x64.tar.gz` |
+| macOS Apple Silicon | `rkdevcli-<版本>-macos-arm64.tar.gz` |
+| Windows x64 | `rkdevcli-<版本>-windows-x64.zip` |
+
+每个 Release 附带 `SHA256SUMS`。也可以从源码构建，见下文。
+
 ## 功能
 
 - `scan`：枚举 RockUSB 设备，区分 Maskrom / Loader，Loader 模式附带芯片型号与容量
