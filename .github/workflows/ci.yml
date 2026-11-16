@@ -13,3 +13,4 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - run: cargo build --release --locked
       - run: ./target/release/rkdevcli --version
+      - run: ./scripts/package-deb.sh --out /tmp/dist && dpkg-deb -I /tmp/dist/*.deb

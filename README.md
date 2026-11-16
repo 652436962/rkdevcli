@@ -14,10 +14,18 @@
 | 平台 | 文件 |
 | --- | --- |
 | Linux x86_64（glibc 2.35+） | `rkdevcli-<版本>-linux-x64.tar.gz` |
+| Debian / Ubuntu x86_64 | `rkdevcli_<版本>_amd64.deb` |
 | macOS Apple Silicon | `rkdevcli-<版本>-macos-arm64.tar.gz` |
 | Windows x64 | `rkdevcli-<版本>-windows-x64.zip` |
 
-每个 Release 附带 `SHA256SUMS`。也可以从源码构建，见下文。
+每个 Release 附带 `SHA256SUMS`。Debian / Ubuntu 也可以直接安装 deb（含命令与 udev 规则）：
+
+```bash
+sudo apt install ./rkdevcli_0.1.0_amd64.deb
+rkdevcli scan
+```
+
+也可以从源码构建，见下文。
 
 ## 功能
 
@@ -76,7 +84,7 @@ rkdevcli serve --state-dir ~/.local/state/rkdevcli
 
 ## Linux USB 权限
 
-普通用户访问开发板需要 udev 规则授权 Rockusb 接口（VID `2207`）。不要用 root 运行本工具。示例：
+普通用户访问开发板需要 udev 规则授权 Rockusb 接口（VID `2207`）。不要用 root 运行本工具。deb 包自带 `/usr/lib/udev/rules.d/99-rkdevcli.rules`；安装时开发板已插着的话，执行 `sudo udevadm control --reload-rules && sudo udevadm trigger --subsystem-match=usb` 或重新插拔生效。使用压缩包时手动创建同样的规则：
 
 ```udev
 SUBSYSTEM=="usb", ATTR{idVendor}=="2207", MODE="0666", TAG+="uaccess"

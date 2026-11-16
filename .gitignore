@@ -8,3 +8,5 @@
 /staging/
 rkdevcli-*.tar.gz
 rkdevcli-*.zip
+/dist/
+rkdevcli_*.deb
